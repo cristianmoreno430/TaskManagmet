@@ -38,7 +38,7 @@ namespace TaskBussines
         public TaskDto CrearTarea(string nombre)
         {
             List<TaskDto> taskDtos = ObtenerTareas();
-            int id = taskDtos == null ? 1 : taskDtos.Count + 1;
+            int id = /*taskDtos == null ? 1 :*/ taskDtos.Count + 1;
             TaskDto tarea = new TaskDto { Id = id, Nombre = nombre, Completada = false };
             _taskInformation.Agregar(tarea);
             return tarea;
