@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TaskManagmet\TaskManagmetApi.csproj" />
+    <ProjectReference Include="..\TaskManagmetApi.csproj" />
     <ProjectReference Include="..\TaskService\TaskBussines.csproj" />
   </ItemGroup>
 
