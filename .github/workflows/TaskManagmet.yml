@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - master
+      - dev
   pull_request:
     branches:
       - master
+      - dev
 
 jobs:
   build:
@@ -27,5 +29,7 @@ jobs:
     - name: Build the solution
       run: dotnet build --configuration Release --no-restore
 
-    - name: Run unit tests
-      run: dotnet test --no-restore --verbosity normal
+       # Ejecutar las pruebas unitarias
+    - name: Run Unit Tests
+      run: dotnet test --no-build --configuration Release --filter "Category=Unit"
+      
