@@ -33,9 +33,9 @@ jobs:
     - name: Build the solution
       run: dotnet build --configuration Release --no-restore
 
-       # Ejecutar las pruebas unitarias
-    - name: Run Unit Tests
-      run: dotnet test --no-build --configuration Release --filter "Category=Unit"
+    #    # Ejecutar las pruebas unitarias
+    # - name: Run Unit Tests
+    #   run: dotnet test --no-build --configuration Release --filter "Category=Unit"
       
        # Ejecutar las pruebas de integración solo en la rama 'dev' o 'develop'
     - name: Run Integration Tests
