@@ -32,5 +32,5 @@ jobs:
              
        # Ejecutar las pruebas de integración, solo en la rama 'develop'
     - name: Run Integration Tests
-      if: github.ref == 'refs/heads/develop'
+      if: github.ref == 'refs/heads/dev'
       run: dotnet test --no-build --configuration Release --filter "Category=Integration"
