@@ -5,6 +5,7 @@ using TaskData.Interfaces;
 
 namespace TestTaskManage
 {
+    [Trait("Category", "Funtional")]
     public  class TaskServiceFuntionalTest
     {
         private readonly ITasksService _service;

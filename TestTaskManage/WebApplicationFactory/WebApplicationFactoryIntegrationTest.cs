@@ -4,6 +4,7 @@ using TaskManagmetApi;
 
 namespace TestTaskManage.WebApplicationFactory
 {
+    [Trait("Category", "Integration")]
     public class WebApplicationFactoryIntegrationTest : IClassFixture<WebApplicationFactory<Program>>
     {
         private readonly HttpClient _client;

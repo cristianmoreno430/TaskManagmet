@@ -6,9 +6,9 @@ using TaskData.Interfaces;
 
 namespace TestTaskManage
 {
+    [Trait("Category", "Unit")]
     public class TaskServiceUnitTest
     {
-
 
         private readonly Mock<ITaskInformation> _mockRepository;
         private readonly ITasksService _service;

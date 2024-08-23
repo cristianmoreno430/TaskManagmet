@@ -5,12 +5,13 @@ using TaskData.Interfaces;
 
 namespace TestTaskManage
 {
-    public class WebApplicationFactoryIntegrationTest
+    [Trait("Category", "Integration")]
+    public class TaskServiceIntegrationTest
     {
         private readonly ITasksService _service; 
         private readonly ITaskInformation _repository; // Dependencia real        
 
-        public WebApplicationFactoryIntegrationTest()
+        public TaskServiceIntegrationTest()
         {
             _repository = new TaskInformation(); // Usando una implementación real
             _service = new TasksService(_repository);

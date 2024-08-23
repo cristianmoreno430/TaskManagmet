@@ -3,6 +3,8 @@ using OpenQA.Selenium.Chrome;
 
 namespace TestTaskManage.Selenuim
 {
+    [Trait("Category", "Functional")]
+
     public class SeleniunmFunctionalTest 
     {        
 

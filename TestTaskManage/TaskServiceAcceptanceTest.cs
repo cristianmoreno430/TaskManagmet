@@ -5,6 +5,7 @@ using TaskData.Interfaces;
 
 namespace TestTaskManage
 {
+    [Trait("Category", "Acceptance")]
     public class TaskServiceAcceptanceTest
     {
         private readonly ITasksService _service;

@@ -6,6 +6,7 @@ using TaskData.Interfaces;
 
 namespace TestTaskManage
 {
+    [Trait("Category", "Performance")]
     public class TaskServicePerformanceTest
     {
         private readonly ITasksService _service;

@@ -5,6 +5,7 @@ using TaskData.Interfaces;
 
 namespace TestTaskManage
 {
+    [Trait("Category", "Regression")]
     public class TaskServiceRegressionTest
     {
         private readonly ITasksService _service;
