@@ -1,4 +1,4 @@
-name: TaskManagmet Pipeline
+name: TaskManagement Pipeline
 
 on:
   push:
@@ -13,14 +13,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Debug github.ref
-      run: | 
-          echo "Ref: ${{ github.ref }}"
+      run: |
+        echo "Ref: ${{ github.ref }}"
 
     - name: Setup .NET 8
       uses: actions/setup-dotnet@v2
@@ -31,13 +31,9 @@ jobs:
       run: dotnet restore
 
     - name: Build the solution
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore    
 
-    #    # Ejecutar las pruebas unitarias
-    # - name: Run Unit Tests
-    #   run: dotnet test --no-build --configuration Release --filter "Category=Unit"
-      
-       # Ejecutar las pruebas de integración solo en la rama 'dev' o 'develop'
     - name: Run Integration Tests
-      if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/develop'
+      if: github.ref == 'refs/heads/dev'
       run: dotnet test --no-build --configuration Release --filter "Category=Integration"
+
