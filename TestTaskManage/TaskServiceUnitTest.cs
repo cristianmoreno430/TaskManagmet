@@ -8,7 +8,7 @@ namespace TestTaskManage
 {
     public class TaskServiceUnitTest
     {
-        
+
 
         private readonly Mock<ITaskInformation> _mockRepository;
         private readonly ITasksService _service;
